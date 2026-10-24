@@ -1,0 +1,68 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   LISTA COMPLETA DE ARCHIVOS - OWASP BALS v1.0.2                            ║
+║   Última actualización: 2026-01                                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ESTRUCTURA DEL PROYECTO
+═════════════════════════════════════════════════════════════════════════════
+
+owasp-bals/
+│
+├── plugin.json                          ← Metadatos del Power para Kiro
+├── POWER.md                             ← Documentación del Power (ES + EN)
+├── README.md                            ← README principal del repositorio
+├── CHANGELOG.md                         ← Historial de versiones
+├── EXAMPLES.md                          ← 8 casos de uso con prompts completos
+├── LICENSE                              ← GPL-3.0-or-later
+├── icon.svg                             ← Ícono del Power
+├── hallazgo-tecnico.md                  ← Plantilla (legacy, ver templates/)
+├── reporte-ejecutivo.md                 ← Plantilla (legacy, ver templates/)
+├── plan-remediacion.md                  ← Plantilla (legacy, ver templates/)
+├── LISTA-COMPLETA-ARCHIVOS.txt          ← Este archivo
+│
+├── skills/
+│   └── owasp-security-testing/
+│       └── SKILL.md                     ← Skill técnica principal para Kiro
+│
+├── com.amazon.aws/
+│   └── kiro/
+│       ├── kiro.json                    ← Configuración específica Kiro IDE
+│       └── README.md                    ← Guía de integración con Kiro
+│
+├── docs/
+│   └── SKILL.md                         ← Redirige a skills/owasp-security-testing/SKILL.md
+│
+├── templates/                           ← Plantillas profesionales listas para usar
+│   ├── hallazgo-tecnico.md              ← Plantilla documentación de hallazgo
+│   ├── reporte-ejecutivo.md             ← Plantilla reporte ejecutivo C-level
+│   └── plan-remediacion.md              ← Plantilla plan de remediación
+│
+└── .github/
+    └── workflows/
+        └── validate-power.yml           ← GitHub Actions: validación automática
+
+═════════════════════════════════════════════════════════════════════════════
+TOTAL: 18 archivos
+═════════════════════════════════════════════════════════════════════════════
+
+ARCHIVOS REQUERIDOS PARA KIRO
+═════════════════════════════════════════════════════════════════════════════
+
+OBLIGATORIOS (el Power no funciona sin estos):
+  ✓ plugin.json
+  ✓ POWER.md
+  ✓ skills/owasp-security-testing/SKILL.md
+  ✓ com.amazon.aws/kiro/kiro.json
+
+ALTAMENTE RECOMENDADOS:
+  ✓ README.md
+  ✓ icon.svg
+  ✓ LICENSE
+  ✓ EXAMPLES.md
+  ✓ templates/
+
+═════════════════════════════════════════════════════════════════════════════
+REPOSITORIO: https://github.com/Byronsasvin/owasp-bals
+═════════════════════════════════════════════════════════════════════════════
