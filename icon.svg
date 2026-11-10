@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="#FF4444" stroke="#CC0000" stroke-width="4"/>
+  
+  <!-- Shield Shape -->
+  <path d="M64 20 L85 30 L85 75 C85 85 64 100 64 100 C64 100 43 85 43 75 L43 30 Z" 
+        fill="#FFFFFF" stroke="#CC0000" stroke-width="2"/>
+  
+  <!-- Simple Lock -->
+  <rect x="56" y="60" width="16" height="20" rx="2" fill="none" stroke="#FF4444" stroke-width="2"/>
+  <circle cx="64" cy="55" r="4" fill="none" stroke="#FF4444" stroke-width="2"/>
+  
+  <!-- OWASP Text -->
+  <text x="64" y="115" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">OWASP</text>
+</svg>
