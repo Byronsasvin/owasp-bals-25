@@ -1,0 +1,12 @@
+# SOLO PARA PRUEBAS: workflow con prácticas inseguras intencionales.
+# No está en .github/workflows, por lo que no se ejecuta.
+name: build
+on: pull_request_target
+permissions: write-all
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: some-org/some-action@v1
+      - run: npm install

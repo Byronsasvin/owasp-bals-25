@@ -16,6 +16,9 @@ Guía para evaluaciones de seguridad con OWASP Top 10:2025. El detalle técnico 
 3. Recorrer `references/checklist.md` por vector.
 4. Por hallazgo: descripción, reproducción, vector y score CVSS v3.1, impacto, remediación con código, mapeo de cumplimiento (`references/compliance-mapping.md`).
 5. Entregar con las plantillas de `templates/`.
+6. Guardar el reporte en `reports/AAAA-MM-DD-<tema>.md` y `.pdf` (ver `references/reporting.md`). No sobrescribir reportes previos. Si no puedes generar el PDF, entrega el `.md` y explica cómo generarlo.
+
+Otras referencias: `code-review.md` (código del workspace), `remediation.md` (parches), `api-security.md`, `cvss.md` (v3.1 y v4.0). Perfiles: Rápido, Estándar (por defecto), Completo.
 
 ## Vectores 2025
 

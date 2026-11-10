@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "OWASP BALS: confirmar autorización antes de escanear",
+      "trigger": "PreToolUse",
+      "matcher": "execute_pwsh|executeBash",
+      "action": {
+        "type": "agent",
+        "prompt": "Si el comando va a escanear o probar un host o URL (nmap, nuclei, zap, sqlmap, curl contra un objetivo externo), detente y confirma con el usuario que tiene autorización escrita y que el objetivo está dentro del alcance. Si es un comando local no relacionado con pruebas de seguridad, continúa."
+      }
+    }
+  ]
+}

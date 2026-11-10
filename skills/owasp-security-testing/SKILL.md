@@ -3,7 +3,7 @@ name: owasp-security-testing
 description: Metodología de pruebas de seguridad OWASP Top 10:2025 con scoring CVSS v3.1, mapeo de cumplimiento (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001) y generación de reportes. Úsala cuando el usuario pida una evaluación de seguridad, pentest, auditoría, revisión de vulnerabilidades, score CVSS, validación de remediación, cadena de suministro de software o reporte ejecutivo de seguridad.
 license: GPL-3.0-or-later
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   author: Byron Antonio Lainez Sasvin
   keywords: owasp, seguridad, pentest, cvss, cumplimiento, pci-dss, gdpr, hipaa, nist, supply-chain
 ---
@@ -19,14 +19,41 @@ Metodología para evaluar aplicaciones web con OWASP Top 10:2025, scoring CVSS v
 3. Usa solo payloads **no destructivos** (ver `references/payloads.md`).
 4. No incluyas credenciales, tokens ni datos personales reales en los reportes.
 
+## Modos de trabajo
+
+| Modo | Cuándo | Referencia |
+|---|---|---|
+| Revisión de código del workspace (recomendado en Kiro) | El usuario tiene el proyecto abierto | `references/code-review.md` |
+| Prueba de endpoint o aplicación | URL o endpoint autorizado | `references/checklist.md`, `references/payloads.md` |
+| Seguridad de APIs (REST, GraphQL, JWT, OAuth) | Servicios o contratos de API | `references/api-security.md` |
+| Cadena de suministro | Dependencias, CI/CD, contenedores | `references/code-review.md` (sección A03) |
+| Validación post-remediación | Un hallazgo ya corregido | `references/checklist.md` |
+
+## Perfiles de profundidad
+
+- **Rápido**: los 3 riesgos más críticos con remediación. Sin checklist completo.
+- **Estándar** (por defecto): los 10 vectores, hallazgos con CVSS y CWE, plan de remediación.
+- **Completo**: estándar más checklist de 72 ítems, mapeo de cumplimiento y reporte en md y PDF.
+
+Si el usuario no indica el perfil, usa Estándar y dilo.
+
 ## Cuándo cargar cada referencia
 
 Carga solo lo necesario para la tarea:
 
+- Revisión de código y patrones de riesgo: `references/code-review.md`
+- Remediación con código por stack: `references/remediation.md`
 - Checklist de pruebas por vector: `references/checklist.md`
 - Payloads de prueba no destructivos: `references/payloads.md`
+- APIs, GraphQL, JWT y OAuth: `references/api-security.md`
+- CVSS v3.1 y v4.0: `references/cvss.md`
 - Mapeo de cumplimiento normativo: `references/compliance-mapping.md`
+- Formato de reporte, CWE, SARIF y guardado md + PDF: `references/reporting.md`
 - Plantillas de entrega: `templates/reporte-ejecutivo.md`, `templates/hallazgo-tecnico.md`, `templates/plan-remediacion.md` (en la raíz del Power)
+
+## Idioma
+
+Responde en el idioma del usuario. Los términos técnicos (CVSS, CWE, SSRF) se mantienen en su forma estándar.
 
 ## Metodología de 5 fases
 
@@ -60,7 +87,9 @@ Carga solo lo necesario para la tarea:
 - Configuración Incorrecta sube a A02; Inyección pasa a A05; Autenticación a A07.
 - "Componentes Vulnerables y Desactualizados" se amplía a Cadena de Suministro (A03).
 
-## Scoring CVSS v3.1
+## Scoring
+
+CVSS v3.1 por defecto y v4.0 bajo petición. Cada hallazgo lleva su CWE. Detalle, métricas y reglas en `references/cvss.md`.
 
 | Rango | Severidad |
 |-------|-----------|
@@ -69,24 +98,17 @@ Carga solo lo necesario para la tarea:
 | 4.0-6.9 | Media |
 | 0.1-3.9 | Baja |
 
-Formato de vector: `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` (9.8).
-
-- **AV**: Network, Adjacent, Local, Physical
-- **AC**: Low, High
-- **PR**: None, Low, High
-- **UI**: None, Required
-- **S**: Unchanged, Changed
-- **C/I/A**: None, Low, High
-
-Calculadora: https://www.first.org/cvss/calculator/3.1
+No inventes scores: justifica cada métrica o marca el score como estimado.
 
 ## Flujo de trabajo del agente
 
-1. Confirmar autorización y alcance.
-2. Identificar el vector o vectores pedidos (por defecto, los 10).
-3. Cargar `references/checklist.md` y recorrer los ítems del vector.
-4. Para cada hallazgo: descripción, pasos de reproducción, vector CVSS y score, impacto, remediación con código, mapeo de cumplimiento.
+1. Confirmar autorización, alcance y perfil de profundidad.
+2. Elegir modo de trabajo y vectores (por defecto, los 10).
+3. Recorrer la referencia correspondiente.
+4. Para cada hallazgo: ubicación, CWE, vector CVSS y score, pasos de reproducción, impacto, remediación con código (`references/remediation.md`) y cumplimiento afectado.
 5. Entregar con la plantilla adecuada de `templates/`.
+6. Guardar el reporte en `reports/` como `.md` y `.pdf` con fecha (ver `references/reporting.md`). No sobrescribir reportes previos.
+7. Indicar qué no se pudo verificar.
 
 ## Prompts de ejemplo
 
@@ -105,6 +127,7 @@ Calculadora: https://www.first.org/cvss/calculator/3.1
 
 ## Historial
 
+- **v2.2.0**: Revisión de código del workspace, remediación con código, CVSS 4.0, seguridad de APIs, perfiles de profundidad, CWE y SARIF, reportes en md y PDF, casos de evaluación y hooks de ejemplo.
 - **v2.1.0**: Frontmatter compatible con Agent Skills, referencias separadas, reglas de autorización.
 - **v2.0.0**: Actualización a OWASP Top 10:2025.
 - **v1.0.0**: Versión inicial (OWASP 2021).

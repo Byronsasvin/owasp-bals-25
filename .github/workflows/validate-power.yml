@@ -36,6 +36,19 @@ jobs:
             "templates/hallazgo-tecnico.md"
             "templates/reporte-ejecutivo.md"
             "templates/plan-remediacion.md"
+            "steering/owasp-security-testing.md"
+            "skills/owasp-security-testing/references/checklist.md"
+            "skills/owasp-security-testing/references/payloads.md"
+            "skills/owasp-security-testing/references/compliance-mapping.md"
+            "skills/owasp-security-testing/references/code-review.md"
+            "skills/owasp-security-testing/references/remediation.md"
+            "skills/owasp-security-testing/references/cvss.md"
+            "skills/owasp-security-testing/references/api-security.md"
+            "skills/owasp-security-testing/references/reporting.md"
+            "evals/cases.md"
+            "reports/README.md"
+            "scripts/md-to-pdf.mjs"
+            "scripts/package-lock.json"
           )
           all_ok=true
           for file in "${files[@]}"; do
@@ -146,15 +159,20 @@ jobs:
           print("✅ POWER.md válido y versiones consistentes:", versions)
           EOF
 
-      - name: Validate steering and references exist
+      - name: Validate hooks examples are valid JSON
         run: |
-          for f in steering/owasp-security-testing.md \
-                   skills/owasp-security-testing/references/checklist.md \
-                   skills/owasp-security-testing/references/payloads.md \
-                   skills/owasp-security-testing/references/compliance-mapping.md; do
-            [ -f "$f" ] || { echo "❌ FALTA: $f"; exit 1; }
-            echo "✅ $f"
+          for f in examples/hooks/*.json; do
+            python3 -c "import json,sys; d=json.load(open('$f')); assert d['version']=='v1' and d['hooks']" \
+              && echo "✅ $f" || { echo "❌ $f inválido"; exit 1; }
           done
+
+      - name: Validate every report has md and pdf
+        run: |
+          fail=0
+          for md in reports/20*.md; do
+            [ -f "${md%.md}.pdf" ] && echo "✅ $md + pdf" || { echo "❌ falta PDF para $md"; fail=1; }
+          done
+          exit $fail
 
       - name: Check for broken internal links
         run: |

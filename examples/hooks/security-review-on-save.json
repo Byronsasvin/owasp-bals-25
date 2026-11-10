@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "OWASP BALS: revisión al guardar",
+      "trigger": "PostFileSave",
+      "matcher": "\\.(py|js|ts|tsx|jsx|java|cs|go|php|rb)$",
+      "action": {
+        "type": "agent",
+        "prompt": "Revisa solo el archivo recién guardado con la skill owasp-security-testing (references/code-review.md). Reporta únicamente hallazgos reales con línea, CWE y remediación mínima. Si no hay hallazgos, responde en una línea. No modifiques archivos sin pedir permiso."
+      }
+    }
+  ]
+}

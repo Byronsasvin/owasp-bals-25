@@ -1,6 +1,13 @@
 # Mapeo de cumplimiento
 
-Mapeo orientativo. Valida con el equipo de cumplimiento antes de usarlo en una auditoría formal.
+Mapeo orientativo. **No es una certificación ni asesoría legal.** Los números de requisito pueden cambiar entre versiones de cada norma.
+
+Antes de citar un requisito en un reporte:
+1. Confírmalo en el texto oficial vigente (PCI SSC, EUR-Lex para GDPR, HHS para HIPAA, NIST CSF 2.0, ISO/IEC 27001:2022 Anexo A).
+2. Márcalo en el reporte como "mapeo sugerido, pendiente de validación por cumplimiento" si no lo confirmaste.
+3. No afirmes que un sistema "cumple" o "incumple": indica "posible brecha frente a" la norma.
+
+Última revisión del mapeo: 2026-11-10 (sin verificar contra los textos oficiales en esta fecha).
 
 | Vector OWASP 2025 | PCI-DSS v4.0 | GDPR | HIPAA Security Rule | NIST CSF 2.0 | ISO 27001:2022 |
 |---|---|---|---|---|---|

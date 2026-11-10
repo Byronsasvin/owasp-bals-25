@@ -4,7 +4,7 @@ displayName: "OWASP BALS - Security Testing"
 description: "Professional OWASP Top 10:2025 security testing framework for web applications. CVSS v3.1 scoring, compliance mapping (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), 70+ item checklist, 25+ real payloads, and executive report generation."
 keywords: ["owasp", "security", "seguridad", "testing", "pentest", "vulnerabilities", "cvss", "compliance", "pci-dss", "gdpr", "hipaa", "nist", "iso27001", "injection", "xss", "authentication", "supply-chain"]
 author: "Byron Antonio Lainez Sasvin"
-version: "2.1.0"
+version: "2.2.0"
 ---
 
 # OWASP BALS — Security Testing Power
@@ -64,6 +64,9 @@ Diseñado para equipos de desarrollo, seguridad y cumplimiento en Latinoamérica
 | **Checklist de 70+ items** | Guía de verificación exhaustiva por vector OWASP |
 | **25+ Payloads reales** | Ejemplos listos para testing de SQL Injection, XSS, XXE y más |
 | **Reportes Profesionales** | Genera reportes ejecutivos, técnicos y planes de remediación |
+| **Revisión de código del workspace** | Detecta patrones inseguros con archivo, línea y CWE, y propone el parche |
+| **APIs y CVSS 4.0** | REST, GraphQL, JWT, OAuth; scoring v3.1 y v4.0 |
+| **Histórico en md y PDF** | Cada reporte se guarda en `reports/` en ambos formatos |
 
 ---
 
@@ -217,7 +220,7 @@ Security Researcher · LATAM
 - Instagram: [@bals.sec](https://instagram.com/bals.sec)
 - Web: [byronlainez.click](https://byronlainez.click)
 
-**Licencia**: GPL-3.0-or-later | **Versión**: 2.1.0
+**Licencia**: GPL-3.0-or-later | **Versión**: 2.2.0
 
 ---
 
@@ -292,4 +295,4 @@ Generate compliance matrix with identified gaps and remediation roadmap.
 **Byron Antonio Lainez Sasvin** — Security Researcher  
 GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click
 
-**License**: GPL-3.0-or-later | **Version**: 2.1.0
+**License**: GPL-3.0-or-later | **Version**: 2.2.0

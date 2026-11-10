@@ -7,6 +7,30 @@ Versioning basado en [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [2.2.0] — 2026-11-10
+
+### Agregado
+- `references/code-review.md`: revisión de código del workspace, patrones por vector con CWE, cadena de suministro y secretos
+- `references/remediation.md`: remediación con código (Python, Node.js, Java, C#)
+- `references/cvss.md`: CVSS v3.1 y v4.0
+- `references/api-security.md`: OWASP API Security, GraphQL, JWT y OAuth
+- `references/reporting.md`: formato de reporte, CWE, SARIF y regla de guardado md + PDF
+- `evals/`: 10 casos de evaluación y archivos de prueba vulnerables intencionales
+- `examples/hooks/`: tres hooks de ejemplo para Kiro (opcionales)
+- `scripts/md-to-pdf.mjs`: genera el PDF de un reporte (Node.js + Chrome o Edge)
+- `reports/`: histórico de reportes en `.md` y `.pdf`; primer reporte de mejoras
+- Perfiles de profundidad (Rápido, Estándar, Completo) y modos de trabajo en la skill
+
+### Cambiado
+- Cada reporte se guarda en `.md` y `.pdf` con fecha, sin sobrescribir los anteriores
+- `compliance-mapping.md`: advertencias y proceso de validación contra textos oficiales
+- CI valida los nuevos archivos, los hooks de ejemplo y que cada reporte tenga su PDF
+
+### Eliminado
+- Plantillas duplicadas de la raíz (`hallazgo-tecnico.md`, `reporte-ejecutivo.md`, `plan-remediacion.md`); se conserva `templates/`
+
+---
+
 ## [2.1.0] — 2026-11-10
 
 ### Agregado

@@ -1,0 +1,10 @@
+{
+  "name": "owasp-bals-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Utilidades para generar PDF de los reportes",
+  "dependencies": {
+    "marked": "18.2.0"
+  }
+}

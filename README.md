@@ -111,4 +111,4 @@ GPL-3.0-or-later — Ver [LICENSE](./LICENSE)
 
 ## Versión
 
-2.1.0
+2.2.0

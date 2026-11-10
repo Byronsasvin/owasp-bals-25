@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "OWASP BALS: revisión de dependencias y CI/CD",
+      "trigger": "PostFileSave",
+      "matcher": "(package\\.json|requirements.*\\.txt|pyproject\\.toml|pom\\.xml|go\\.mod|Dockerfile|\\.github/workflows/.*\\.ya?ml)$",
+      "action": {
+        "type": "agent",
+        "prompt": "Revisa el cambio en este manifiesto según A03 Cadena de Suministro (references/code-review.md): versiones sin fijar, lockfile ausente, paquetes de nombre sospechoso, acciones sin pin a SHA, imágenes con tag flotante, permisos amplios. Responde breve y solo con riesgos reales."
+      }
+    }
+  ]
+}
