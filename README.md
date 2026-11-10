@@ -57,7 +57,7 @@ No se requiere configuración. El Power se activa automáticamente.
 ### Manual
 
 ```bash
-git clone https://github.com/Byronsasvin/owasp-bals.git
+git clone https://github.com/Byronsasvin/owasp-bals-25.git
 ```
 
 Copia la carpeta al directorio de Powers de Kiro.

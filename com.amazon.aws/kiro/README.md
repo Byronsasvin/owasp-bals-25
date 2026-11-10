@@ -8,11 +8,11 @@ This directory contains Kiro IDE-specific configuration for the OWASP BALS power
 1. Open Kiro IDE
 2. Go to **Powers** panel
 3. Click **Add Custom Power** → **Import power from GitHub**
-4. Enter: `https://github.com/Byronsasvin/owasp-bals`
+4. Enter: `https://github.com/Byronsasvin/owasp-bals-25`
 5. Click **Install**
 
 ### From local folder
-1. Clone: `git clone https://github.com/Byronsasvin/owasp-bals.git`
+1. Clone: `git clone https://github.com/Byronsasvin/owasp-bals-25.git`
 2. In Kiro → Powers → Add Custom Power → **Import power from a folder**
 3. Select the cloned folder
 

@@ -1,6 +1,6 @@
 LISTA COMPLETA DE ARCHIVOS - OWASP BALS v2.2.0
 Ultima actualizacion: 2026-11-10
-Repositorio: https://github.com/Byronsasvin/owasp-bals
+Repositorio: https://github.com/Byronsasvin/owasp-bals-25
 
 ARCHIVOS DEL REPOSITORIO (41)
 ------------------------------------------------

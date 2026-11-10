@@ -138,7 +138,7 @@ Versioning basado en [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
-[2.0.0]: https://github.com/Byronsasvin/owasp-bals/compare/v1.0.2...v2.0.0
-[1.0.2]: https://github.com/Byronsasvin/owasp-bals/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/Byronsasvin/owasp-bals/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/Byronsasvin/owasp-bals/releases/tag/v1.0.0
+[2.0.0]: https://github.com/Byronsasvin/owasp-bals-25/compare/v1.0.2...v2.0.0
+[1.0.2]: https://github.com/Byronsasvin/owasp-bals-25/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/Byronsasvin/owasp-bals-25/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/Byronsasvin/owasp-bals-25/releases/tag/v1.0.0

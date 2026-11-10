@@ -6,7 +6,7 @@
 | **Versión anterior** | 2.0.0 (2026-10-23) |
 | **Versión actual** | 2.2.0 |
 | **Responsable** | Byron Antonio Lainez Sasvin |
-| **Repositorio** | https://github.com/Byronsasvin/owasp-bals |
+| **Repositorio** | https://github.com/Byronsasvin/owasp-bals-25 |
 
 ## 1. Resumen ejecutivo
 
