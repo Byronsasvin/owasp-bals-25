@@ -7,6 +7,25 @@ Versioning basado en [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [2.0.1] — 2026-11-10
+
+### Corregido
+- **Instalación en Kiro restaurada**: se agregó la carpeta `skills/owasp-security-testing/SKILL.md`,
+  que faltaba en el repositorio publicado y es obligatoria según la especificación
+  [Agent Plugins](https://kiro.dev/docs/powers/create/) que usa `plugin.json`. Sin este
+  archivo, Kiro no podía cargar la skill técnica del Power.
+- Se eliminaron las referencias a `com.amazon.aws/kiro/kiro.json` y `com.amazon.aws/kiro/README.md`
+  en `POWER.md` y `README.md`: ese formato no corresponde a ningún esquema oficial de Kiro
+  (ni Agent Plugins ni el legacy `POWER.md` + `steering/`) y nunca existió en el repositorio.
+- Se recreó la carpeta `templates/` con las 3 plantillas (`reporte-ejecutivo.md`,
+  `hallazgo-tecnico.md`, `plan-remediacion.md`), ausente desde la publicación de v2.0.0.
+- `plugin.json`: `homepage` y `repository` corregidos para apuntar a
+  `github.com/Byronsasvin/owasp-bals-25` (apuntaban al repo `owasp-bals` sin sufijo).
+- `LISTA-COMPLETA-ARCHIVOS.txt` actualizado a v2.0.0/estructura real (seguía en v1.0.2)
+  y ahora documenta los requisitos de instalación según la especificación Agent Plugins.
+
+---
+
 ## [2.0.0] — 2026-10-23
 
 ### Agregado

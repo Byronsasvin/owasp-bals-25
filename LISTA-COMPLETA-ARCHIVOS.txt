@@ -1,68 +1,67 @@
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║   LISTA COMPLETA DE ARCHIVOS - OWASP BALS v1.0.2                            ║
-║   Última actualización: 2026-01                                              ║
+║   LISTA COMPLETA DE ARCHIVOS - OWASP BALS v2.0.0                            ║
+║   Última actualización: 2026-11-10                                           ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+
+FORMATO: Agent Plugins specification (plugin.json + skills/)
+Ver: https://kiro.dev/docs/powers/create/
 
 ESTRUCTURA DEL PROYECTO
 ═════════════════════════════════════════════════════════════════════════════
 
-owasp-bals/
+owasp-bals-25/
 │
-├── plugin.json                          ← Metadatos del Power para Kiro
+├── plugin.json                          ← Manifiesto del Power (Agent Plugins spec)
 ├── POWER.md                             ← Documentación del Power (ES + EN)
 ├── README.md                            ← README principal del repositorio
 ├── CHANGELOG.md                         ← Historial de versiones
 ├── EXAMPLES.md                          ← 8 casos de uso con prompts completos
 ├── LICENSE                              ← GPL-3.0-or-later
 ├── icon.svg                             ← Ícono del Power
-├── hallazgo-tecnico.md                  ← Plantilla (legacy, ver templates/)
-├── reporte-ejecutivo.md                 ← Plantilla (legacy, ver templates/)
-├── plan-remediacion.md                  ← Plantilla (legacy, ver templates/)
+├── hallazgo-tecnico.md                  ← Plantilla (ver también templates/)
+├── reporte-ejecutivo.md                 ← Plantilla (ver también templates/)
+├── plan-remediacion.md                  ← Plantilla (ver también templates/)
 ├── LISTA-COMPLETA-ARCHIVOS.txt          ← Este archivo
 │
 ├── skills/
 │   └── owasp-security-testing/
 │       └── SKILL.md                     ← Skill técnica principal para Kiro
 │
-├── com.amazon.aws/
-│   └── kiro/
-│       ├── kiro.json                    ← Configuración específica Kiro IDE
-│       └── README.md                    ← Guía de integración con Kiro
-│
-├── docs/
-│   └── SKILL.md                         ← Redirige a skills/owasp-security-testing/SKILL.md
-│
-├── templates/                           ← Plantillas profesionales listas para usar
-│   ├── hallazgo-tecnico.md              ← Plantilla documentación de hallazgo
-│   ├── reporte-ejecutivo.md             ← Plantilla reporte ejecutivo C-level
-│   └── plan-remediacion.md              ← Plantilla plan de remediación
-│
-└── .github/
-    └── workflows/
-        └── validate-power.yml           ← GitHub Actions: validación automática
+└── templates/                           ← Plantillas profesionales listas para usar
+    ├── hallazgo-tecnico.md              ← Plantilla documentación de hallazgo
+    ├── reporte-ejecutivo.md             ← Plantilla reporte ejecutivo C-level
+    └── plan-remediacion.md              ← Plantilla plan de remediación
 
 ═════════════════════════════════════════════════════════════════════════════
-TOTAL: 18 archivos
+TOTAL: 16 archivos
 ═════════════════════════════════════════════════════════════════════════════
 
-ARCHIVOS REQUERIDOS PARA KIRO
+ARCHIVOS REQUERIDOS PARA KIRO (Agent Plugins spec)
 ═════════════════════════════════════════════════════════════════════════════
 
 OBLIGATORIOS (el Power no funciona sin estos):
-  ✓ plugin.json
-  ✓ POWER.md
+  ✓ plugin.json                          (manifiesto, con $schema válido)
   ✓ skills/owasp-security-testing/SKILL.md
-  ✓ com.amazon.aws/kiro/kiro.json
 
 ALTAMENTE RECOMENDADOS:
+  ✓ POWER.md
   ✓ README.md
   ✓ icon.svg
   ✓ LICENSE
   ✓ EXAMPLES.md
   ✓ templates/
 
+NOTA IMPORTANTE:
+  El formato antiguo `com.amazon.aws/kiro/kiro.json` NO forma parte de la
+  especificación Agent Plugins ni del formato legacy POWER.md+steering/ de
+  Kiro, y fue eliminado de este proyecto en v2.0.0. Si tu instalación de
+  Kiro reporta un Power incompleto, verifica que exista `plugin.json` (con
+  `$schema`: https://agent-plugins.org/schemas/1.0.0/plugin.schema.json)
+  o `POWER.md` en la raíz del repositorio, y que `skills/<nombre>/SKILL.md`
+  esté presente.
+
 ═════════════════════════════════════════════════════════════════════════════
-REPOSITORIO: https://github.com/Byronsasvin/owasp-bals
+REPOSITORIO: https://github.com/Byronsasvin/owasp-bals-25
 ═════════════════════════════════════════════════════════════════════════════

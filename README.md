@@ -58,10 +58,10 @@ No se requiere configuración. El Power se activa automáticamente.
 ### Manual
 
 ```bash
-git clone https://github.com/Byronsasvin/owasp-bals.git
+git clone https://github.com/Byronsasvin/owasp-bals-25.git
 ```
 
-Copia la carpeta al directorio de Powers de Kiro.
+En Kiro: **Powers panel → Add Custom Power → Import power from a folder**, y selecciona el directorio clonado (debe contener `plugin.json`).
 
 ---
 
@@ -86,7 +86,7 @@ Casos incluidos:
 - [Documentación Técnica Completa](./skills/owasp-security-testing/SKILL.md)
 - [Ejemplos de Uso](./EXAMPLES.md)
 - [Guía del Power para Kiro](./POWER.md)
-- [Configuración Kiro IDE](./com.amazon.aws/kiro/README.md)
+- [Manifiesto del Power](./plugin.json)
 - [OWASP Top 10:2025](https://top10.owasp.org/2025)
 
 ---
@@ -112,4 +112,4 @@ GPL-3.0-or-later — Ver [LICENSE](./LICENSE)
 
 ## Versión
 
-2.0.0
+2.0.1
