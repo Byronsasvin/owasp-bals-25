@@ -158,12 +158,14 @@ Fase 5: Reportes         → Documentación profesional de hallazgos
 | A04 | Fallas Criptográficas | ALTA (7.5) | Datos sin cifrar, claves expuestas |
 | A05 | Inyección | CRÍTICA (9.8) | SQL Injection, Command Injection, XSS |
 | A06 | Diseño Inseguro | ALTA (8.1) | Falta de modelado de amenazas, patrones inseguros |
-| A07 | Fallas de Autenticación | ALTA (9.3) | Fuerza bruta, sesiones débiles, sin MFA |
+| A07 | Fallas de Autenticación | CRÍTICA (9.3) | Fuerza bruta, sesiones débiles, sin MFA |
 | A08 | Fallas de Integridad de Software y Datos | CRÍTICA (9.8) | Deserialización insegura, updates sin firmar |
 | A09 | Fallas de Logging y Alertas de Seguridad | ALTA (7.5) | Sin alertas en eventos críticos, sin SIEM |
 | A10 | Manejo Incorrecto de Condiciones Excepcionales | ALTA (7.5) | Fail-open, fugas de info por excepciones |
 
 > Novedades 2025: A03 (Cadena de Suministro) y A10 (Condiciones Excepcionales) son nuevas; SSRF (CWE-918) se integró en A01. Fuente: https://top10.owasp.org/2025
+>
+> Los valores CVSS de la tabla son referencias internas de este Power para priorizar, no datos de OWASP. El score real se calcula por hallazgo.
 
 ---
 

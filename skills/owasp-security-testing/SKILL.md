@@ -78,14 +78,18 @@ Responde en el idioma del usuario. Los términos técnicos (CVSS, CWE, SSRF) se 
 | A09 | Fallas de Logging y Alertas de Seguridad | 7.5 | Logs insuficientes, sin alertas, retención |
 | A10 | Manejo Incorrecto de Condiciones Excepcionales | 7.5 | Errores mal gestionados, fail-open, fugas por excepción |
 
-\* CVSS de referencia por categoría. El score real depende del contexto de cada hallazgo.
+\* Valores de referencia internos de este Power para orientar la priorización. **No provienen de OWASP**, que no publica un CVSS por categoría. El score real depende del contexto de cada hallazgo.
 
 ### Cambios respecto a 2021
 
+Según la introducción oficial (https://top10.owasp.org/2025/0x00_2025-Introduction/):
+
 - Nuevas: A03 (Cadena de Suministro) y A10 (Condiciones Excepcionales).
-- SSRF deja de ser categoría propia y se integra en A01.
-- Configuración Incorrecta sube a A02; Inyección pasa a A05; Autenticación a A07.
-- "Componentes Vulnerables y Desactualizados" se amplía a Cadena de Suministro (A03).
+- A03 amplía A06:2021 "Componentes Vulnerables y Desactualizados" a todo el ecosistema de dependencias, build y distribución.
+- SSRF deja de ser categoría propia y se integra en A01 (CWE-918).
+- Configuración Incorrecta sube de #5 a A02. Criptografía baja de #2 a A04. Inyección baja de #3 a A05. Diseño Inseguro baja de #4 a A06.
+- A07 se mantiene en el puesto #7 y cambia de nombre a "Authentication Failures" (antes "Identification and Authentication Failures").
+- A09 cambia a "Security Logging & Alerting Failures" (antes "Logging and Monitoring").
 
 ## Scoring
 

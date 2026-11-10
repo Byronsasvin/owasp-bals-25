@@ -7,6 +7,16 @@ Versioning basado en [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [Sin publicar]
+
+### Corregido
+- Validación contra la fuente oficial OWASP Top 10:2025: A07 no cambia de puesto (sigue en #7, solo cambia el nombre); se agregan los cambios reales de posición de A02, A04, A05 y A06
+- Los valores CVSS por categoría se declaran como referencia interna, no de OWASP
+- `POWER.md`: A07 con score 9.3 figuraba como ALTA; corregido a CRÍTICA
+- Plantillas actualizadas a OWASP 2025 y v2.2.0; `LISTA-COMPLETA-ARCHIVOS.txt` regenerada
+
+---
+
 ## [2.2.0] — 2026-11-10
 
 ### Agregado

@@ -63,7 +63,7 @@ Estado: abierto | en remediación | cerrado
 | A09 | 117, 223, 532, 778 |
 | A10 | 209, 248, 636, 703, 755 |
 
-Verifica cada CWE en https://cwe.mitre.org/ antes de citarlo.
+Esta tabla es una selección práctica, **no la lista oficial**. OWASP mapea decenas de CWE por categoría (por ejemplo, 40 en A01). Consulta el mapeo oficial en la página de cada categoría, p. ej. https://top10.owasp.org/2025/A01_2025-Broken_Access_Control/, y verifica cada CWE en https://cwe.mitre.org/ antes de citarlo.
 
 ## Salida SARIF (opcional, para GitHub Code Scanning)
 
