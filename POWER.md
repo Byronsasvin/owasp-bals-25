@@ -4,7 +4,7 @@ displayName: "OWASP BALS - Security Testing"
 description: "Professional OWASP Top 10:2025 security testing framework for web applications. CVSS v3.1 scoring, compliance mapping (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), 70+ item checklist, 25+ real payloads, and executive report generation."
 keywords: ["owasp", "security", "seguridad", "testing", "pentest", "vulnerabilities", "cvss", "compliance", "pci-dss", "gdpr", "hipaa", "nist", "iso27001", "injection", "xss", "authentication", "supply-chain"]
 author: "Byron Antonio Lainez Sasvin"
-version: "2.0.0"
+version: "2.0.1"
 ---
 
 # OWASP BALS — Security Testing Power
@@ -202,7 +202,7 @@ Fase 5: Reportes         → Documentación profesional de hallazgos
 - [Plantilla: Reporte Ejecutivo](./templates/reporte-ejecutivo.md)
 - [Plantilla: Hallazgo Técnico](./templates/hallazgo-tecnico.md)
 - [Plantilla: Plan de Remediación](./templates/plan-remediacion.md)
-- [Configuración para Kiro IDE](./com.amazon.aws/kiro/README.md)
+- [Manifiesto del Power](./plugin.json)
 - [OWASP Top 10:2025](https://top10.owasp.org/2025)
 - [Calculadora CVSS v3.1](https://www.first.org/cvss/calculator/3.1)
 
@@ -218,7 +218,7 @@ Security Researcher · LATAM
 - Instagram: [@bals.sec](https://instagram.com/bals.sec)
 - Web: [byronlainez.click](https://byronlainez.click)
 
-**Licencia**: GPL-3.0-or-later | **Versión**: 2.0.0
+**Licencia**: GPL-3.0-or-later | **Versión**: 2.0.1
 
 ---
 
@@ -286,7 +286,7 @@ Generate compliance matrix with identified gaps and remediation roadmap.
 - [Technical Skill Documentation](./skills/owasp-security-testing/SKILL.md)
 - [Usage Examples](./EXAMPLES.md)
 - [Templates](./templates/)
-- [Kiro IDE Configuration](./com.amazon.aws/kiro/README.md)
+- [Plugin Manifest](./plugin.json)
 - [OWASP Top 10:2025](https://top10.owasp.org/2025)
 
 ## Author
@@ -294,4 +294,4 @@ Generate compliance matrix with identified gaps and remediation roadmap.
 **Byron Antonio Lainez Sasvin** — Security Researcher  
 GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click
 
-**License**: GPL-3.0-or-later | **Version**: 2.0.0
+**License**: GPL-3.0-or-later | **Version**: 2.0.1
