@@ -32,7 +32,6 @@ No se requiere configuración. El Power se activa automáticamente.
 | Checklist | 70+ items de verificación exhaustiva |
 | Payloads | 25+ ejemplos reales (SQL, XSS, XXE, Command Injection y más) |
 | Reportes | Ejecutivos, técnicos y planes de remediación |
-| AWS | Integración con Security Hub, CodeBuild, CodePipeline |
 
 ---
 
@@ -112,4 +111,4 @@ GPL-3.0-or-later — Ver [LICENSE](./LICENSE)
 
 ## Versión
 
-2.0.0
+2.1.0

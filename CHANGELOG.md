@@ -7,6 +7,24 @@ Versioning basado en [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [2.1.0] — 2026-11-10
+
+### Agregado
+- `steering/owasp-security-testing.md` (estaba documentado en 2.0.0 pero no existía)
+- `skills/owasp-security-testing/references/` con checklist (72 items), payloads no destructivos y mapeo de cumplimiento
+- Reglas de autorización y alcance en la skill
+
+### Cambiado
+- Frontmatter de `SKILL.md` conforme a Agent Skills: `name` en minúsculas con guiones igual a la carpeta, `description` con criterio de activación, `version` y `keywords` bajo `metadata`
+- `payloads`: sustituido payload destructivo (`DROP TABLE`) por pruebas no destructivas
+- Prompt de vector específico en `POWER.md` con IDs OWASP 2025 correctos
+- CI: falla si el frontmatter de la skill es inválido y valida `steering/` y `references/`
+
+### Eliminado
+- Referencias a integración con AWS Security Hub/CodeBuild/CodePipeline en README y POWER.md (no estaba implementada)
+
+---
+
 ## [2.0.0] — 2026-10-23
 
 ### Agregado

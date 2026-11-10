@@ -88,14 +88,73 @@ jobs:
           echo "Validando com.amazon.aws/kiro/kiro.json..."
           python3 -c "import json; json.load(open('com.amazon.aws/kiro/kiro.json'))" && echo "✅ kiro.json es JSON válido"
 
-      - name: Validate SKILL.md has frontmatter
+      - name: Validate SKILL.md frontmatter (Agent Skills)
         run: |
-          echo "Validando SKILL.md tiene frontmatter..."
-          if head -1 skills/owasp-security-testing/SKILL.md | grep -q "^---"; then
-            echo "✅ SKILL.md tiene frontmatter YAML"
-          else
-            echo "⚠️  SKILL.md no tiene frontmatter YAML (---)"
-          fi
+          python3 << 'EOF'
+          import re, sys, os
+
+          path = 'skills/owasp-security-testing/SKILL.md'
+          text = open(path, encoding='utf-8').read()
+          m = re.match(r'^---\r?\n(.*?)\r?\n---\r?\n', text, re.S)
+          if not m:
+              print("❌ SKILL.md sin frontmatter YAML"); sys.exit(1)
+          fm = m.group(1)
+
+          name = re.search(r'^name:\s*(.+)$', fm, re.M)
+          desc = re.search(r'^description:\s*(.+)$', fm, re.M)
+          errors = []
+          if not name:
+              errors.append("falta 'name'")
+          else:
+              n = name.group(1).strip().strip('"\'')
+              if not re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', n) or len(n) > 64:
+                  errors.append(f"'name' inválido: {n!r} (minúsculas y guiones, máx 64)")
+              if n != os.path.basename(os.path.dirname(path)):
+                  errors.append(f"'name' ({n}) debe coincidir con la carpeta")
+          if not desc:
+              errors.append("falta 'description'")
+          elif len(desc.group(1).strip()) > 1024:
+              errors.append("'description' supera 1024 caracteres")
+
+          if errors:
+              for e in errors: print("❌", e)
+              sys.exit(1)
+          print("✅ Frontmatter de SKILL.md válido")
+          EOF
+
+      - name: Validate POWER.md frontmatter and version consistency
+        run: |
+          python3 << 'EOF'
+          import re, json, sys
+
+          power = open('POWER.md', encoding='utf-8').read()
+          m = re.match(r'^---\r?\n(.*?)\r?\n---', power, re.S)
+          if not m:
+              print("❌ POWER.md sin frontmatter"); sys.exit(1)
+          fm = m.group(1)
+          for key in ('name', 'displayName', 'description', 'keywords'):
+              if not re.search(rf'^{key}:', fm, re.M):
+                  print(f"❌ POWER.md: falta '{key}'"); sys.exit(1)
+
+          versions = {
+              'POWER.md': re.search(r'^version:\s*"?([\d.]+)"?', fm, re.M).group(1),
+              'plugin.json': json.load(open('plugin.json'))['version'],
+              'kiro.json': json.load(open('com.amazon.aws/kiro/kiro.json'))['version'],
+          }
+          if len(set(versions.values())) != 1:
+              print("❌ Versiones inconsistentes:", versions); sys.exit(1)
+          print("✅ POWER.md válido y versiones consistentes:", versions)
+          EOF
+
+      - name: Validate steering and references exist
+        run: |
+          for f in steering/owasp-security-testing.md \
+                   skills/owasp-security-testing/references/checklist.md \
+                   skills/owasp-security-testing/references/payloads.md \
+                   skills/owasp-security-testing/references/compliance-mapping.md; do
+            [ -f "$f" ] || { echo "❌ FALTA: $f"; exit 1; }
+            echo "✅ $f"
+          done
 
       - name: Check for broken internal links
         run: |
@@ -124,9 +183,5 @@ jobs:
           EOF
 
       - name: Summary
-        run: |
-          echo ""
-          echo "════════════════════════════════════"
-          echo "  OWASP BALS Power — Validación OK  "
-          echo "════════════════════════════════════"
-          echo ""
+        if: success()
+        run: echo "OWASP BALS Power — Validación OK"

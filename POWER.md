@@ -4,7 +4,7 @@ displayName: "OWASP BALS - Security Testing"
 description: "Professional OWASP Top 10:2025 security testing framework for web applications. CVSS v3.1 scoring, compliance mapping (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), 70+ item checklist, 25+ real payloads, and executive report generation."
 keywords: ["owasp", "security", "seguridad", "testing", "pentest", "vulnerabilities", "cvss", "compliance", "pci-dss", "gdpr", "hipaa", "nist", "iso27001", "injection", "xss", "authentication", "supply-chain"]
 author: "Byron Antonio Lainez Sasvin"
-version: "2.0.0"
+version: "2.1.0"
 ---
 
 # OWASP BALS — Security Testing Power
@@ -64,13 +64,12 @@ Diseñado para equipos de desarrollo, seguridad y cumplimiento en Latinoamérica
 | **Checklist de 70+ items** | Guía de verificación exhaustiva por vector OWASP |
 | **25+ Payloads reales** | Ejemplos listos para testing de SQL Injection, XSS, XXE y más |
 | **Reportes Profesionales** | Genera reportes ejecutivos, técnicos y planes de remediación |
-| **Integración AWS** | Conecta con Security Hub, CodeBuild y CodePipeline |
 
 ---
 
 ## Cómo activar este Power
 
-Este Power se activa automáticamente cuando mencionas cualquiera de estos términos en Kiro:
+Este Power se activa cuando mencionas cualquiera de las palabras clave definidas en su frontmatter (`keywords`), por ejemplo:
 
 ```
 seguridad, security, owasp, pruebas, testing, pentest, penetración,
@@ -109,7 +108,7 @@ cumplimiento PCI-DSS y GDPR, y un plan de remediación con cronograma.
 **2. Analizar un vector específico**
 ```
 Evalúa [URL o endpoint] para vulnerabilidades de [nombre del vector].
-Por ejemplo: SQL Injection (A01), Control de Acceso Roto (A04), XSS (A08).
+Por ejemplo: Inyección SQL/XSS (A05), Control de Acceso Roto (A01), Cadena de Suministro (A03).
 Incluye payloads de prueba, score CVSS y código de remediación.
 ```
 
@@ -185,7 +184,7 @@ Fase 5: Reportes         → Documentación profesional de hallazgos
 > "Necesito una evaluación OWASP completa con evidencia para el reporte de auditoría"
 
 **DevOps / DevSecOps**
-> "Quiero integrar escaneos automáticos en el pipeline de CI/CD con AWS CodeBuild"
+> "Quiero revisar la seguridad de mi pipeline de CI/CD y mis dependencias (A03)"
 
 **CTO / Manager**
 > "Necesito un reporte ejecutivo de riesgos de seguridad para presentar al board"
@@ -218,7 +217,7 @@ Security Researcher · LATAM
 - Instagram: [@bals.sec](https://instagram.com/bals.sec)
 - Web: [byronlainez.click](https://byronlainez.click)
 
-**Licencia**: GPL-3.0-or-later | **Versión**: 2.0.0
+**Licencia**: GPL-3.0-or-later | **Versión**: 2.1.0
 
 ---
 
@@ -242,7 +241,6 @@ Professional web application security testing framework for Kiro IDE. Covers OWA
 | **70+ item Checklist** | Exhaustive verification per OWASP vector |
 | **25+ Real Payloads** | Ready-to-use SQL Injection, XSS, XXE examples |
 | **Professional Reports** | Executive summaries, technical findings, remediation plans |
-| **AWS Integration** | Security Hub, CodeBuild, CodePipeline |
 
 ## Quick Start Prompts
 
@@ -294,4 +292,4 @@ Generate compliance matrix with identified gaps and remediation roadmap.
 **Byron Antonio Lainez Sasvin** — Security Researcher  
 GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click
 
-**License**: GPL-3.0-or-later | **Version**: 2.0.0
+**License**: GPL-3.0-or-later | **Version**: 2.1.0
