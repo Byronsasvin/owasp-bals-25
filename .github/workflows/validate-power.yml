@@ -180,24 +180,31 @@ jobs:
           python3 << 'EOF'
           import re, os
 
-          files_to_check = ['POWER.md', 'README.md']
+          import sys
+
+          files_to_check = [
+              'POWER.md', 'README.md', 'reports/README.md', 'EXAMPLES.md',
+              'skills/owasp-security-testing/SKILL.md',
+          ]
           broken = []
 
           for fname in files_to_check:
-              with open(fname) as f:
+              if not os.path.exists(fname):
+                  continue
+              base = os.path.dirname(fname)
+              with open(fname, encoding='utf-8') as f:
                   content = f.read()
-              links = re.findall(r'\[.*?\]\(\.(.*?)\)', content)
-              for link in links:
-                  path = link.lstrip('/')
+              for link in re.findall(r'\]\((\.[^)#\s]*)\)', content):
+                  path = os.path.normpath(os.path.join(base, link))
                   if not os.path.exists(path):
-                      broken.append(f"{fname}: .{link}")
+                      broken.append(f"{fname}: {link}")
 
           if broken:
-              print("⚠️  Posibles enlaces rotos:")
+              print("❌ Enlaces internos rotos:")
               for b in broken:
                   print(f"   - {b}")
-          else:
-              print("✅ No se detectaron enlaces internos rotos")
+              sys.exit(1)
+          print("✅ No se detectaron enlaces internos rotos")
           EOF
 
       - name: Summary

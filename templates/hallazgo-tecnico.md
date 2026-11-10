@@ -6,8 +6,8 @@
 
 **ID**: [OWASP-XXX-APP-001]  
 **Título**: [Nombre descriptivo del hallazgo]  
-**Vector OWASP**: A0X:2021 - [Nombre del Vector]  
-**CVSS v3.1**: [Score]  
+**Vector OWASP**: A0X:2025 - [Nombre del Vector]  
+**CVSS (versión 3.1 o 4.0)**: [Score]  
 **Severidad**: [CRITICAL / HIGH / MEDIUM / LOW]  
 **CWE**: CWE-[número]  
 **CAPEC**: CAPEC-[número]  
@@ -205,5 +205,5 @@ Input del Usuario
 
 ---
 
-**OWASP BALS v1.0.0** | Byron Antonio Lainez Sasvin  
+**OWASP BALS v2.2.0** | Byron Antonio Lainez Sasvin  
 GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click

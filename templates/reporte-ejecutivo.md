@@ -1,5 +1,7 @@
 # EVALUACIÓN DE SEGURIDAD - REPORTE EJECUTIVO
 
+> Guardar este reporte en `reports/AAAA-MM-DD-tema.md` y generar su PDF (ver `skills/owasp-security-testing/references/reporting.md`).
+
 ---
 
 **Cliente**: [Nombre del Cliente]  
@@ -37,7 +39,7 @@ La evaluación de seguridad realizada en [Aplicación] ha identificado **[X] vul
 
 ### 1. [Nombre del Hallazgo]
 
-**Vector OWASP**: A0X:2021 - [Vector]  
+**Vector OWASP**: A0X:2025 - [Vector]  
 **CVSS Score**: [X.X] [SEVERIDAD]  
 **Ubicación**: [Endpoint/Componente]  
 
@@ -162,5 +164,5 @@ Se recomienda [acción recomendada principal].
 
 ---
 
-**OWASP BALS v1.0.0** | Byron Antonio Lainez Sasvin  
+**OWASP BALS v2.2.0** | Byron Antonio Lainez Sasvin  
 GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click

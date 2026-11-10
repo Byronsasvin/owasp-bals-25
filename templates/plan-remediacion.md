@@ -189,5 +189,5 @@ Checklist por cada hallazgo remediado:
 
 ---
 
-**OWASP BALS v1.0.0** | Byron Antonio Lainez Sasvin  
+**OWASP BALS v2.2.0** | Byron Antonio Lainez Sasvin  
 GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click
