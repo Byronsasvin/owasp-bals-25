@@ -45,6 +45,7 @@ jobs:
             "skills/owasp-security-testing/references/cvss.md"
             "skills/owasp-security-testing/references/api-security.md"
             "skills/owasp-security-testing/references/reporting.md"
+            "skills/owasp-security-testing/references/scanning.md"
             "evals/cases.md"
             "reports/README.md"
             "scripts/md-to-pdf.mjs"

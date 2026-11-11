@@ -43,6 +43,7 @@ Carga solo lo necesario para la tarea:
 
 - Revisión de código y patrones de riesgo: `references/code-review.md`
 - Remediación con código por stack: `references/remediation.md`
+- Herramientas de escaneo (ZAP, Nuclei, SAST, SCA) y comandos: `references/scanning.md`
 - Checklist de pruebas por vector: `references/checklist.md`
 - Payloads de prueba no destructivos: `references/payloads.md`
 - APIs, GraphQL, JWT y OAuth: `references/api-security.md`
@@ -58,7 +59,7 @@ Responde en el idioma del usuario. Los términos técnicos (CVSS, CWE, SSRF) se 
 ## Metodología de 5 fases
 
 1. **Reconocimiento**: tecnologías, endpoints, arquitectura, certificados TLS, inventario de dependencias (SBOM). Sin explotar.
-2. **Escaneo**: ZAP, Nuclei, SAST, SCA, DAST y verificación de integridad de la cadena de suministro.
+2. **Escaneo**: revisión de código del workspace (SAST manual asistido, lo único que ejecutas tú mismo), y comandos de ZAP, Nuclei, SCA y DAST que **el usuario** instala y ejecuta. Verifica con `Get-Command`/`where` qué herramientas hay instaladas antes de proponer comandos. Si no están, dilo y no afirmes haber escaneado. Interpreta los resultados que el usuario te entregue.
 3. **Pruebas manuales**: un conjunto de pruebas por cada vector OWASP, sesiones, autorización, lógica de negocio, manejo de errores.
 4. **Análisis de riesgo**: CVSS v3.1, probabilidad, impacto empresarial, contexto de cumplimiento.
 5. **Reportes**: resumen ejecutivo, hallazgos técnicos, plan de remediación, criterios de cierre, cronograma.

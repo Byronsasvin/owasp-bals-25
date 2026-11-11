@@ -13,7 +13,7 @@ Professional web application security testing framework for Kiro IDE. Test appli
 
 ---
 
-## 🚀 Inicio Rápido — Cómo hacer tu primer escaneo
+## 🚀 Inicio Rápido — Cómo hacer tu primera evaluación
 
 Copia cualquiera de estos prompts directamente en el chat de Kiro:
 
@@ -139,12 +139,14 @@ Genera matriz de cumplimiento con gaps identificados y roadmap de remediación.
 ## Metodología de 5 Fases
 
 ```
-Fase 1: Reconocimiento   → Identificar tecnologías y superficie de ataque
-Fase 2: Escaneo          → Detección automática de vulnerabilidades conocidas
-Fase 3: Pruebas Manuales → Validar hallazgos y explorar lógica de negocio
-Fase 4: Análisis de Riesgo → Priorizar por impacto con CVSS v3.1
-Fase 5: Reportes         → Documentación profesional de hallazgos
+Fase 1: Reconocimiento   → Guía para identificar tecnologías y superficie de ataque
+Fase 2: Escaneo          → Revisión de código + comandos de ZAP/Nuclei/SCA y triage de resultados
+Fase 3: Pruebas Manuales → Checklist y payloads para validar hallazgos y lógica de negocio
+Fase 4: Análisis de Riesgo → Priorizar por impacto con CVSS v3.1 o v4.0 y CWE
+Fase 5: Reportes         → Reportes y planes de remediación en .md y .pdf
 ```
+
+> **Importante:** este Power no instala ni ejecuta ZAP, Nuclei ni Semgrep. Tú instalas y ejecutas esas herramientas; Kiro te da los comandos, interpreta los resultados y revisa el código de tu proyecto. Los escaneos contra un host requieren autorización y alcance confirmados.
 
 ---
 

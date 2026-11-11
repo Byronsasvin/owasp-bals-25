@@ -37,11 +37,24 @@ No se requiere configuración. El Power se activa automáticamente.
 
 ## Metodología de 5 Fases
 
-1. **Reconocimiento** — Fingerprinting, enumeración de endpoints, OSINT básico
-2. **Escaneo** — OWASP ZAP, Nuclei, SAST, análisis de dependencias
-3. **Pruebas Manuales** — Validación de cada vector OWASP con técnicas específicas
-4. **Análisis de Riesgo** — Priorización con CVSS v3.1 e impacto de negocio
-5. **Reportes** — Documentación profesional con planes de remediación
+1. **Reconocimiento** — Guía para fingerprinting, enumeración de endpoints y OSINT básico
+2. **Escaneo** — Guía y comandos para OWASP ZAP, Nuclei, SAST y análisis de dependencias
+3. **Pruebas Manuales** — Checklist de 72 ítems y payloads no destructivos por vector OWASP
+4. **Análisis de Riesgo** — Priorización con CVSS v3.1 o v4.0, CWE e impacto de negocio
+5. **Reportes** — Reportes con planes de remediación, guardados en `.md` y `.pdf`
+
+### Qué hace el Power y qué no
+
+El Power es una **metodología guiada dentro de Kiro**: indica qué probar, genera payloads y comandos, **revisa el código de tu proyecto**, calcula severidad y redacta reportes.
+
+**No incluye ni instala** ZAP, Nuclei, Semgrep ni otras herramientas. Para la fase de Escaneo, tú las instalas y las ejecutas; Kiro te da los comandos e interpreta los resultados que le pases. Los escaneos contra un host requieren que confirmes autorización y alcance.
+
+| Fase | Lo hace el Power (Kiro) | Lo ejecutas tú con tus herramientas |
+|---|---|---|
+| Reconocimiento | Plan, qué enumerar, análisis de lo que obtengas | Consultas y enumeración contra el objetivo |
+| Escaneo | Revisión de código del workspace (SAST manual asistido), comandos de ZAP/Nuclei/SCA, triage de resultados | ZAP, Nuclei, Semgrep, `npm audit`, `pip-audit` |
+| Pruebas manuales | Checklist, payloads, análisis de código y respuestas | Envío de pruebas al objetivo autorizado |
+| Riesgo y reportes | Todo el análisis, CVSS, CWE, remediación con código, `.md` y `.pdf` | Generar el PDF con `scripts/md-to-pdf.mjs` |
 
 ---
 
