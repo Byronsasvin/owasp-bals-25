@@ -9,6 +9,9 @@ Versioning basado en [Semantic Versioning](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+### Cambiado
+- Power 100% en español: `displayName` y `description` en `POWER.md`, `plugin.json` y `kiro.json`; se eliminó la sección en inglés de `POWER.md`; `com.amazon.aws/kiro/README.md` traducido. Los nombres de botones de Kiro y los nombres oficiales de OWASP se conservan en inglés
+
 ### Corregido
 - Validación contra la fuente oficial OWASP Top 10:2025: A07 no cambia de puesto (sigue en #7, solo cambia el nombre); se agregan los cambios reales de posición de A02, A04, A05 y A06
 - Los valores CVSS por categoría se declaran como referencia interna, no de OWASP

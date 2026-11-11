@@ -1,15 +1,15 @@
 ---
 name: "owasp-bals"
-displayName: "OWASP BALS - Security Testing"
-description: "Professional OWASP Top 10:2025 security testing framework for web applications. CVSS v3.1 scoring, compliance mapping (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), 70+ item checklist, 25+ real payloads, and executive report generation."
+displayName: "OWASP BALS - Pruebas de Seguridad"
+description: "Marco de pruebas de seguridad web OWASP Top 10:2025 para Kiro. Scoring CVSS v3.1 y v4.0, mapeo de cumplimiento (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), revisión de código, checklist de 72 ítems, más de 25 payloads de prueba y reportes en Markdown y PDF. Pensado para Latinoamérica, 100% en español."
 keywords: ["owasp", "security", "seguridad", "testing", "pentest", "vulnerabilities", "cvss", "compliance", "pci-dss", "gdpr", "hipaa", "nist", "iso27001", "injection", "xss", "authentication", "supply-chain"]
 author: "Byron Antonio Lainez Sasvin"
 version: "2.2.0"
 ---
 
-# OWASP BALS — Security Testing Power
+# OWASP BALS — Pruebas de Seguridad
 
-Professional web application security testing framework for Kiro IDE. Test applications against OWASP Top 10:2025, calculate CVSS v3.1 scores, verify compliance requirements (PCI-DSS, GDPR, HIPAA), and generate executive reports.
+Marco profesional de pruebas de seguridad para aplicaciones web, integrado en Kiro. Evalúa contra OWASP Top 10:2025, calcula scores CVSS, verifica requisitos de cumplimiento (PCI-DSS, GDPR, HIPAA) y genera reportes ejecutivos en Markdown y PDF.
 
 ---
 
@@ -225,78 +225,3 @@ Security Researcher · LATAM
 - Web: [byronlainez.click](https://byronlainez.click)
 
 **Licencia**: GPL-3.0-or-later | **Versión**: 2.2.0
-
----
-
----
-
-## English
-
-<a name="english"></a>
-
-# OWASP BALS — Security Testing Power
-
-Professional web application security testing framework for Kiro IDE. Covers OWASP Top 10:2025, CVSS v3.1 scoring, compliance mapping, and professional reporting.
-
-## What can you do with this Power?
-
-| Capability | Description |
-|------------|-------------|
-| **OWASP Top 10:2025 Assessment** | Test all 10 critical attack vectors from 2025 |
-| **CVSS v3.1 Scoring** | Professional vulnerability severity scoring |
-| **Compliance Mapping** | PCI-DSS, GDPR, HIPAA, NIST, ISO 27001 validation |
-| **70+ item Checklist** | Exhaustive verification per OWASP vector |
-| **25+ Real Payloads** | Ready-to-use SQL Injection, XSS, XXE examples |
-| **Professional Reports** | Executive summaries, technical findings, remediation plans |
-
-## Quick Start Prompts
-
-**Full Assessment**
-```
-Perform a complete security assessment of [URL or app name] using OWASP BALS.
-Include all 10 vectors, CVSS scoring, PCI-DSS and GDPR compliance mapping,
-and a remediation plan with timeline.
-```
-
-**Specific Vector**
-```
-Test [endpoint] for [vector name] vulnerabilities using OWASP BALS.
-Include test payloads, CVSS score, and remediation code examples.
-```
-
-**Executive Report**
-```
-Generate an executive security report for [application name] using OWASP BALS.
-Audience: [CTO / Board]. Include risk matrix, key findings, compliance gaps,
-and prioritized action plan.
-```
-
-**Compliance Audit**
-```
-Assess [application] against [PCI-DSS / GDPR / HIPAA] requirements.
-Generate compliance matrix with identified gaps and remediation roadmap.
-```
-
-## What this Power does NOT do
-
-- Does not execute real attacks against production systems
-- Does not replace a manual penetration test by a certified professional
-- Does not guarantee 100% vulnerability coverage
-- Does not access your infrastructure directly (guides the process only)
-
-**Important**: Only use this Power on systems you are authorized to test.
-
-## Resources
-
-- [Technical Skill Documentation](./skills/owasp-security-testing/SKILL.md)
-- [Usage Examples](./EXAMPLES.md)
-- [Templates](./templates/)
-- [Kiro IDE Configuration](./com.amazon.aws/kiro/README.md)
-- [OWASP Top 10:2025](https://top10.owasp.org/2025)
-
-## Author
-
-**Byron Antonio Lainez Sasvin** — Security Researcher  
-GitHub: [@Byronsasvin](https://github.com/Byronsasvin) | Email: security@byronlainez.click
-
-**License**: GPL-3.0-or-later | **Version**: 2.2.0

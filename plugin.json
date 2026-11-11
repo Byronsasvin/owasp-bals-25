@@ -2,8 +2,8 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "owasp-bals",
   "version": "2.2.0",
-  "displayName": "OWASP BALS - Security Testing",
-  "description": "Professional OWASP Top 10:2025 security testing framework for web applications. CVSS v3.1 scoring, compliance mapping (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), 70+ item checklist, 25+ real payloads, and executive report generation.",
+  "displayName": "OWASP BALS - Pruebas de Seguridad",
+  "description": "Marco de pruebas de seguridad web OWASP Top 10:2025 para Kiro. Scoring CVSS v3.1 y v4.0, mapeo de cumplimiento (PCI-DSS, GDPR, HIPAA, NIST, ISO 27001), revisión de código, checklist de 72 ítems, más de 25 payloads de prueba y reportes en Markdown y PDF. Pensado para Latinoamérica, 100% en español.",
   "license": "GPL-3.0-or-later",
   "author": {
     "name": "Byron Antonio Lainez Sasvin",

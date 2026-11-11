@@ -1,47 +1,47 @@
-# OWASP BALS — Kiro IDE Configuration
+# OWASP BALS — Configuración para Kiro IDE
 
-This directory contains Kiro IDE-specific configuration for the OWASP BALS power.
+Este directorio contiene la configuración específica de Kiro IDE para el Power OWASP BALS.
 
-## Installation
+## Instalación
 
-### From GitHub
-1. Open Kiro IDE
-2. Go to **Powers** panel
-3. Click **Add Custom Power** → **Import power from GitHub**
-4. Enter: `https://github.com/Byronsasvin/owasp-bals-25`
-5. Click **Install**
+### Desde GitHub
+1. Abre Kiro IDE.
+2. Ve al panel **Powers**.
+3. Haz clic en **Add Custom Power** → **Import power from GitHub**.
+4. Ingresa: `https://github.com/Byronsasvin/owasp-bals-25`
+5. Haz clic en **Install**.
 
-### From local folder
-1. Clone: `git clone https://github.com/Byronsasvin/owasp-bals-25.git`
-2. In Kiro → Powers → Add Custom Power → **Import power from a folder**
-3. Select the cloned folder
+### Desde una carpeta local
+1. Clona el repositorio: `git clone https://github.com/Byronsasvin/owasp-bals-25.git`
+2. En Kiro → Powers → Add Custom Power → **Import power from a folder**.
+3. Selecciona la carpeta clonada.
 
-## Usage
+## Uso
 
-Once installed, mention any of these keywords in the Kiro chat to activate the power:
+Una vez instalado, menciona cualquiera de estas palabras clave en el chat de Kiro para activar el Power:
 
-`owasp`, `security`, `testing`, `pentest`, `vulnerabilities`, `cvss`, `compliance`, `pci-dss`, `gdpr`
+`owasp`, `seguridad`, `pentest`, `vulnerabilidades`, `cvss`, `cumplimiento`, `pci-dss`, `gdpr`
 
-## Update
+## Actualización
 
-If you installed an older version, remove the power in the **Powers** panel and import it again from GitHub or the folder. Check that version `2.2.0` is shown.
+Si instalaste una versión anterior, elimina el Power en el panel **Powers** e impórtalo de nuevo desde GitHub o desde la carpeta. Verifica que aparezca la versión `2.2.0`.
 
-## What is included
+## Qué incluye
 
-- `POWER.md` and `steering/owasp-security-testing.md`: workflow and rules.
-- `skills/owasp-security-testing/`: the skill (`SKILL.md`) and its `references/`.
-- `templates/`: executive report, technical finding and remediation plan.
-- `examples/hooks/`: optional hooks. Copy the ones you want to `.kiro/hooks/` of your project.
-- `evals/`: test cases to check the skill after each change.
-- `reports/`: report history in `.md` and `.pdf`. PDFs are generated with `scripts/md-to-pdf.mjs` (Node.js and Chrome or Edge required).
+- `POWER.md` y `steering/owasp-security-testing.md`: flujo de trabajo y reglas.
+- `skills/owasp-security-testing/`: la skill (`SKILL.md`) y sus `references/`.
+- `templates/`: reporte ejecutivo, hallazgo técnico y plan de remediación.
+- `examples/hooks/`: hooks opcionales. Copia los que quieras a `.kiro/hooks/` de tu proyecto.
+- `evals/`: casos de prueba para verificar la skill tras cada cambio.
+- `reports/`: histórico de reportes en `.md` y `.pdf`. Los PDF se generan con `scripts/md-to-pdf.mjs` (requiere Node.js y Chrome o Edge).
 
-## Quick Start
+## Inicio rápido
 
 ```
 Realiza una evaluación de seguridad básica de [URL].
 Dime los 3 riesgos más críticos y cómo solucionarlos.
 ```
 
-## Author
+## Autor
 
 Byron Antonio Lainez Sasvin — security@byronlainez.click
